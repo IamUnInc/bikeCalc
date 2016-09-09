@@ -1,0 +1,135 @@
+<div><h1>I'm a sweet calculator</h1></div>
+
+<div class="col-md-3">
+  <h2>First Bike Input</h2>
+  <form id="FirstBike">
+    <div>
+      <label for="toptubeLength">Toptube Length</label>
+      <input type="number" name="toptubeLength" id="toptubLength" ng-model="firstBike.toptubeLength" />
+    </div>
+
+    <div>
+      <label for="headtubeAngle">Headtube Angle</label>
+      <input type="number" name="headtubeAngle" id="headtubeAngle" ng-model="firstBike.headtubeAngle" />
+    </div>
+
+    <div>
+      <label for="headtubeLength">Headtube Length</label>
+      <input type="number" name="headtubeLength" id="headtubeLength" ng-model="firstBike.headtubeLength" />
+    </div>
+
+    <div>
+      <label for="effectiveToptube">Effective Toptube</label>
+      <input type="number" name="effectiveToptube" id="effectiveToptube" ng-model="firstBike.effectiveToptube" />
+    </div>
+
+    <div>
+      <label for="bbHeight">BB Height</label>
+      <input type="number" name="bbHeight" id="bbHeight" ng-model="firstBike.bbHeight" />
+    </div>
+
+    <div>
+      <label for="wheelBase">Wheel Base</label>
+      <input type="number" name="wheelBase" id="wheelBase" ng-model="firstBike.wheelBase" />
+    </div>
+
+    <div>
+      <label for="seattubeLength">Seattube Lenght</label>
+      <input type="number" name="seattubeLength" id="seattubeLength" ng-model="firstBike.seattubeLength" />
+    </div>
+
+    <div>
+      <label for="seattubeAngle">Seattube Angle</label>
+      <input type="number" name="seattubeAngle" id="seattubeAngle" ng-model="firstBike.seattubeAngle" />
+    </div>
+
+    <div>
+      <label for="chainstayLength">Chainstay Length</label>
+      <input type="number" name="chainstayLength" id="chainstayLength" ng-model="firstBike.chainstayLength" />
+    </div>
+
+    <div>
+      <label for="reach">Reach</label>
+      <input type="number" name="reach" id="reach" ng-model="firstBike.reach" />
+    </div>
+
+    <!-- <button class="btn btn-default" ng-click="addPerson()">Add Person</button> -->
+<!-- </form> -->
+</div>
+
+<div class="col-md-3">
+  <h2>Second Bike Input</h2>
+  <!-- <form id="SecondBike"> -->
+    <div>
+      <label for="toptubeLength">Toptube Length</label>
+      <input type="number" name="toptubeLength" id="toptubLength" ng-model="secondBike.toptubeLength" />
+    </div>
+
+    <div>
+      <label for="headtubeAngle">Headtube Angle</label>
+      <input type="number" name="headtubeAngle" id="headtubeAngle" ng-model="secondBike.headtubeAngle" />
+    </div>
+
+    <div>
+      <label for="headtubeLength">Headtube Length</label>
+      <input type="number" name="headtubeLength" id="headtubeLength" ng-model="secondBike.headtubeLength" />
+    </div>
+
+    <div>
+      <label for="effectiveToptube">Effective Toptube</label>
+      <input type="number" name="effectiveToptube" id="effectiveToptube" ng-model="secondBike.effectiveToptube" />
+    </div>
+
+    <div>
+      <label for="bbHeight">BB Height</label>
+      <input type="number" name="bbHeight" id="bbHeight" ng-model="secondBike.bbHeight" />
+    </div>
+
+    <div>
+      <label for="wheelBase">Wheel Base</label>
+      <input type="number" name="wheelBase" id="wheelBase" ng-model="secondBike.wheelBase" />
+    </div>
+
+    <div>
+      <label for="seattubeLength">Seattube Length</label>
+      <input type="number" name="seattubeLength" id="seattubeLength" ng-model="secondBike.seattubeLength" />
+    </div>
+
+    <div>
+      <label for="seattubeAngle">Seattube Angle</label>
+      <input type="number" name="seattubeAngle" id="seattubeAngle" ng-model="secondBike.seattubeAngle" />
+    </div>
+
+    <div>
+      <label for="chainstayLength">Chainstay Length</label>
+      <input type="number" name="chainstayLength" id="chainstayLength" ng-model="secondBike.chainstayLength" />
+    </div>
+
+    <div>
+      <label for="reach">Reach</label>
+      <input type="number" name="reach" id="reach" ng-model="secondBike.reach" />
+    </div>
+
+    <!-- <button class="btn btn-default" ng-click="calcTheDiff()">Find the Diff</button> -->
+
+</form>
+
+<button class="btn btn-default" ng-click="calcTheDiff()">Find the Diff</button>
+</div>
+
+<div class="col-md-3">
+<h2>Differences</h2>
+
+<div>
+<p>Toptube Length: {{diffBike.toptubeLength}}</p>
+<p>Headtube Angle: {{diffBike.headtubeAngle}}</p>
+<p>Headtube Length: {{diffBike.headtubeLength}}</p>
+<p>Effective Toptube: {{diffBike.effectiveToptube}}</p>
+<p>BB Height: {{diffBike.bbHeight}}</p>
+<p>Wheel Base: {{diffBike.wheelBase}}</p>
+<p>Seattube Length: {{diffBike.seattubeLength}}</p>
+<p>Seattube Angle: {{diffBike.seattubeAngle}}</p>
+<p>Chainstay Length: {{diffBike.chainstayLength}}</p>
+<p>Reach: {{diffBike.reach}}</p>
+</div>
+</div>
