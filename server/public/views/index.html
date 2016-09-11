@@ -5,14 +5,16 @@
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <!-- <script type="text/javascript" src="/scripts/canvas.js"></script> -->
     <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+    <script type="text/javascript" src="/scripts/factories/dataFactory.js"></script>
     <script type="text/javascript" src="/scripts/controllers/CalcController.js"></script>
     <script type="text/javascript" src="/scripts/controllers/CustomerController.js"></script>
 </head>
 
 <body ng-app="myApp">
 
-    <header><h1>bikeCalc</h1></header>
+    <header class="jumbotron"><h1>bikeCalc</h1></header>
     <div></div>
     <div ng-include="'/views/templates/nav.html'"></div>
     <main ng-view></main>

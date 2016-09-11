@@ -1,6 +1,7 @@
 myApp.controller('CalcController', ['$scope', function($scope) {
   console.log("CalcController works");
 
+  $scope.customerInfo = {};
   $scope.firstBike = {};
   $scope.secondBike = {};
   $scope.diffBike = {};
@@ -36,6 +37,29 @@ myApp.controller('CalcController', ['$scope', function($scope) {
 
     $scope.diffBike.reach = $scope.firstBike.reach - $scope.secondBike.reach;
     console.log($scope.diffBike.reach);
+
+    makingPictures();
   }
 
+
+
 }]);
+
+
+makingPictures = function () {
+  console.log("i work");
+var canvas = document.querySelector("canvas"),
+  ctx = canvas.getContext ("2d");
+ctx.beginPath();
+ctx.moveTo(135, 300);
+ctx.lineTo(115, 100);
+ctx.lineTo(50,125);
+// ctx.closePath();
+
+// ctx.fillStyle = "rgba (255,150,50,0.5)";
+// ctx.fill();
+
+ctx.strokeStyle = "red";
+ctx.lineWidth = 2.0;
+ctx.stroke();
+}
