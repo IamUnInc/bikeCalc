@@ -24,128 +24,159 @@
     </div>
 
   </div>
+</form>
+  <!-- Mobile friendly works better at "col-md-4" but browser is better at 3 -->
+<div class="col-md-2">
+<h3>Bike One</h3>
 
-<div class="col-md-3">
-  <h2>First Bike Input</h2>
+
+
   <form id="FirstBike">
     <div>
+      <label for="bikeOneMake">Make</label>
+      <input class="inputSizeChange" type="text" name="bikeOneMake" id="bikeOneMake" ng-model="firstBike.bikeOneMake" />
+    </div>
+
+    <div>
+      <label for="bikeOneModel">Model</label>
+      <input class="inputSizeChange" type="text" name="bikeOneModel" id="bikeOneModel" ng-model="firstBike.bikeOneModel" />
+    </div>
+
+    <div>
+      <label for="bikeOneSize">Size</label>
+      <input class="inputSizeChangeTwo" type="number" name="bikeOneSize" id="bikeOneSize" ng-model="firstBike.bikeOneSize" />
+    </div>
+
+    <div>
       <label for="toptubeLength">Toptube Length</label>
-      <input type="number" name="toptubeLength" id="toptubLength" ng-model="firstBike.toptubeLength" />
+      <input class="inputSizeChangeTwo" type="number" name="toptubeLength" id="toptubLength" ng-model="firstBike.toptubeLength" />
+      <button ng-click="bikeInfo(1)">i</button>
     </div>
 
     <div>
       <label for="headtubeAngle">Headtube Angle</label>
-      <input type="number" name="headtubeAngle" id="headtubeAngle" ng-model="firstBike.headtubeAngle" />
+      <input class="inputSizeChangeTwo" type="number" name="headtubeAngle" id="headtubeAngle" ng-model="firstBike.headtubeAngle" />
+      <button ng-click="bikeInfo(2)">i</button>
     </div>
 
     <div>
       <label for="headtubeLength">Headtube Length</label>
-      <input type="number" name="headtubeLength" id="headtubeLength" ng-model="firstBike.headtubeLength" />
+      <input class="inputSizeChangeTwo" type="number" name="headtubeLength" id="headtubeLength" ng-model="firstBike.headtubeLength" />
     </div>
 
     <div>
       <label for="effectiveToptube">Effective Toptube</label>
-      <input type="number" name="effectiveToptube" id="effectiveToptube" ng-model="firstBike.effectiveToptube" />
+      <input class="inputSizeChangeTwo" type="number" name="effectiveToptube" id="effectiveToptube" ng-model="firstBike.effectiveToptube" />
     </div>
 
     <div>
       <label for="bbHeight">BB Height</label>
-      <input type="number" name="bbHeight" id="bbHeight" ng-model="firstBike.bbHeight" />
+      <input class="inputSizeChangeTwo" type="number" name="bbHeight" id="bbHeight" ng-model="firstBike.bbHeight" />
     </div>
 
     <div>
       <label for="wheelBase">Wheel Base</label>
-      <input type="number" name="wheelBase" id="wheelBase" ng-model="firstBike.wheelBase" />
+      <input class="inputSizeChangeTwo" type="number" name="wheelBase" id="wheelBase" ng-model="firstBike.wheelBase" />
     </div>
 
     <div>
       <label for="seattubeLength">Seattube Length</label>
-      <input type="number" name="seattubeLength" id="seattubeLength" ng-model="firstBike.seattubeLength" />
+      <input class="inputSizeChangeTwo" type="number" name="seattubeLength" id="seattubeLength" ng-model="firstBike.seattubeLength" />
     </div>
 
     <div>
       <label for="seattubeAngle">Seattube Angle</label>
-      <input type="number" name="seattubeAngle" id="seattubeAngle" ng-model="firstBike.seattubeAngle" />
+      <input class="inputSizeChangeTwo" type="number" name="seattubeAngle" id="seattubeAngle" ng-model="firstBike.seattubeAngle" />
     </div>
 
     <div>
       <label for="chainstayLength">Chainstay Length</label>
-      <input type="number" name="chainstayLength" id="chainstayLength" ng-model="firstBike.chainstayLength" />
+      <input class="inputSizeChangeTwo" type="number" name="chainstayLength" id="chainstayLength" ng-model="firstBike.chainstayLength" />
     </div>
 
     <div>
       <label for="reach">Reach</label>
-      <input type="number" name="reach" id="reach" ng-model="firstBike.reach" />
+      <input class="inputSizeChangeTwo" type="number" name="reach" id="reach" ng-model="firstBike.reach" />
     </div>
 
     <!-- <button class="btn btn-default" ng-click="addPerson()">Add Person</button> -->
 <!-- </form> -->
 </div>
+<!-- Mobile friendly works better at "col-md-4" but browser is better at 3 -->
+<div class="col-md-2">
 
-<div class="col-md-3">
-  <h2>Second Bike Input</h2>
-  <!-- <form id="SecondBike"> -->
+  <h3>Bike Two</h3>
+  <div>
+    <label for="bikeTwoMake">Make</label>
+    <input class="inputSizeChange" type="text" class="inputSizeChange" name="bikeTwoMake" id="bikeTwoMake" ng-model="secondBike.bikeTwoMake" />
+  </div>
+
+  <div>
+    <label for="bikeTwoModel">Model</label>
+    <input class="inputSizeChange" type="text" name="bikeTwoModel" id="bikeTwoModel" ng-model="secondBike.bikeTwoModel" />
+  </div>
+
+  <div>
+    <label for="bikeTwoSize">Size</label>
+    <input class="inputSizeChange" type="number" name="bikeTwoSize" id="bikeTwoSize" ng-model="secondBike.bikeTwoSize" />
+  </div>
+
     <div>
       <label for="toptubeLength">Toptube Length</label>
-      <input type="number" name="toptubeLength" id="toptubLength" ng-model="secondBike.toptubeLength" />
+      <input class="inputSizeChangeTwo" type="number" name="toptubeLength" id="toptubLength" ng-model="secondBike.toptubeLength" />
     </div>
 
     <div>
       <label for="headtubeAngle">Headtube Angle</label>
-      <input type="number" name="headtubeAngle" id="headtubeAngle" ng-model="secondBike.headtubeAngle" />
+      <input class="inputSizeChangeTwo" type="number" name="headtubeAngle" id="headtubeAngle" ng-model="secondBike.headtubeAngle" />
     </div>
 
     <div>
       <label for="headtubeLength">Headtube Length</label>
-      <input type="number" name="headtubeLength" id="headtubeLength" ng-model="secondBike.headtubeLength" />
+      <input class="inputSizeChangeTwo" type="number" name="headtubeLength" id="headtubeLength" ng-model="secondBike.headtubeLength" />
     </div>
 
     <div>
       <label for="effectiveToptube">Effective Toptube</label>
-      <input type="number" name="effectiveToptube" id="effectiveToptube" ng-model="secondBike.effectiveToptube" />
+      <input class="inputSizeChangeTwo" type="number" name="effectiveToptube" id="effectiveToptube" ng-model="secondBike.effectiveToptube" />
     </div>
 
     <div>
       <label for="bbHeight">BB Height</label>
-      <input type="number" name="bbHeight" id="bbHeight" ng-model="secondBike.bbHeight" />
+      <input class="inputSizeChangeTwo" type="number" name="bbHeight" id="bbHeight" ng-model="secondBike.bbHeight" />
     </div>
 
     <div>
       <label for="wheelBase">Wheel Base</label>
-      <input type="number" name="wheelBase" id="wheelBase" ng-model="secondBike.wheelBase" />
+      <input class="inputSizeChangeTwo" type="number" name="wheelBase" id="wheelBase" ng-model="secondBike.wheelBase" />
     </div>
 
     <div>
       <label for="seattubeLength">Seattube Length</label>
-      <input type="number" name="seattubeLength" id="seattubeLength" ng-model="secondBike.seattubeLength" />
+      <input class="inputSizeChangeTwo" type="number" name="seattubeLength" id="seattubeLength" ng-model="secondBike.seattubeLength" />
     </div>
 
     <div>
       <label for="seattubeAngle">Seattube Angle</label>
-      <input type="number" name="seattubeAngle" id="seattubeAngle" ng-model="secondBike.seattubeAngle" />
+      <input class="inputSizeChangeTwo" type="number" name="seattubeAngle" id="seattubeAngle" ng-model="secondBike.seattubeAngle" />
     </div>
 
     <div>
       <label for="chainstayLength">Chainstay Length</label>
-      <input type="number" name="chainstayLength" id="chainstayLength" ng-model="secondBike.chainstayLength" />
+      <input class="inputSizeChangeTwo" type="number" name="chainstayLength" id="chainstayLength" ng-model="secondBike.chainstayLength" />
     </div>
 
     <div>
       <label for="reach">Reach</label>
-      <input type="number" name="reach" id="reach" ng-model="secondBike.reach" />
+      <input class="inputSizeChangeTwo" type="number" name="reach" id="reach" ng-model="secondBike.reach" />
     </div>
 
     <!-- <button class="btn btn-default" ng-click="calcTheDiff()">Find the Diff</button> -->
-
+</div>
 </form>
 
-<button class="btn btn-default" ng-click="calcTheDiff()">Find the Diff</button>
-<button class="btn btn-default">Save</button>
-<button class="btn btn-default">Email</button>
-<button class="btn btn-default">Print</button>
-</div>
 
-<div class="col-md-2">
+<div class="col-md-3">
 <h2>Differences</h2>
 
 <div>
@@ -163,3 +194,33 @@
 </div>
 
 <canvas id="canvas" width="450" height="400"></canvas>
+
+<div class="col-md-4">
+<button class="btn btn-default" ng-click="calcTheDiff()">Find the Diff</button>
+<button class="btn btn-default" ng-click="submitNewComparison()">Save</button>
+<button class="btn btn-default">Email</button>
+<button class="btn btn-default" ng-click="print()">Print</button>
+</div>
+
+<!-- trying modals -->
+
+
+
+       <!-- <div ng-controller="modalController">
+            <button class="btn btn-default" ng-click="open(customer)">modal</button> <br /> -->
+
+                <!--MODAL WINDOW-->
+                <!-- <script type="text/ng-template" id="myModalContent.html">
+                    <div class="modal-header">
+                        <h3>The Customer Name is: {{ customer.name }}</h3>
+                    </div>
+                    <div class="modal-body">
+                            This is where the Customer Details Goes<br />
+                            {{ customer.details }}
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </script>
+
+    </div> -->

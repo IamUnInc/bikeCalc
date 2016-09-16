@@ -1,4 +1,4 @@
-myApp.controller('CalcController', ['$scope', function($scope) {
+myApp.controller('CalcController', ['$scope', '$http', function($scope, $http) {
   console.log("CalcController works");
 
   $scope.customerInfo = {};
@@ -8,6 +8,7 @@ myApp.controller('CalcController', ['$scope', function($scope) {
 
   $scope.calcTheDiff = function () {
     $scope.diffBike = {};
+    $scope.diffBike.toptubeLength = 0;//trying to get rid of the NaNs on the dom
     $scope.diffBike.toptubeLength = $scope.firstBike.toptubeLength - $scope.secondBike.toptubeLength;
     console.log($scope.diffBike.toptubeLength);
 
@@ -39,12 +40,32 @@ myApp.controller('CalcController', ['$scope', function($scope) {
     console.log($scope.diffBike.reach);
 
     clearcanvas();
+    addBikeToCustomer();
     makingPictures();
   }
 
+  // function validateForm(one, two, three) {
+  //     var x = one;
+  //     var y = two;
+  //     var z = three;
+  //     if ((x == null || x == "") || (y == null || y == "")) {
+  //         z = 0;
+  //         return z;
+  //     }
+  // }
+
+  // function resultsAreNan () {
+  //   if ($scope.diffBike.toptubeLength === undefined || $scope.diffBike.toptubeLength === NaN || $scope.diffBike.toptubeLength === ""  || $scope.diffBike.toptubeLength === null) {
+  //     $scope.diffBike.toptubeLength = 0;
+  //     console.log($scope.diffBike.toptubeLength);
+  //   } else {
+  //     console.log("It didn't work. This is what you have ", $scope.diffBike.toptubeLength);
+  //   }
+  // }
+
+
   makingPictures = function () {
     var canvas = "";
-    console.log($scope.diffBike.seattubeLength);
 
     var bbx = 190; //bb height
     var bby = 320; //bb height
@@ -59,61 +80,61 @@ myApp.controller('CalcController', ['$scope', function($scope) {
 
 //seattube length adjuster
   if ($scope.diffBike.seattubeLength > 1 && $scope.diffBike.seattubeLength <= 20) {
-    stx -= 2;
-    sty -= 18;
-  }
-  else if ($scope.diffBike.seattubeLength > 20) {
-    stx -= 4;
-    sty -= 32;
-  } else if ($scope.diffBike.seattubeLength < 0 && $scope.diffBike.seattubeLength >= -20) {
     stx += 2;
     sty += 18;
-  } else if ($scope.diffBike.seattubeLength < -20) {
+  }
+  else if ($scope.diffBike.seattubeLength > 20) {
     stx += 4;
     sty += 32;
+  } else if ($scope.diffBike.seattubeLength < 0 && $scope.diffBike.seattubeLength >= -20) {
+    stx -= 2;
+    sty -= 18;
+  } else if ($scope.diffBike.seattubeLength < -20) {
+    stx -= 4;
+    sty -= 32;
   }
 
 //chainstay length adjuster
   if ($scope.diffBike.chainstayLength > 1 && $scope.diffBike.chainstayLength <= 10) {
-    csx -= 8;
-    csy -= 1;
-  } else if ($scope.diffBike.chainstayLength > 10) {
-    csx -= 16;
-    csy -= 2;
-  } else if ($scope.diffBike.chainstayLength < 0 && $scope.diffBike.chainstayLength >= -10) {
     csx += 8;
     csy += 1;
-  } else if ($scope.diffBike.chainstayLength < -10) {
+  } else if ($scope.diffBike.chainstayLength > 10) {
     csx += 16;
     csy += 2;
+  } else if ($scope.diffBike.chainstayLength < 0 && $scope.diffBike.chainstayLength >= -10) {
+    csx -= 8;
+    csy -= 1;
+  } else if ($scope.diffBike.chainstayLength < -10) {
+    csx -= 16;
+    csy -= 2;
   }
 
 //headtube length adjuster
   if ($scope.diffBike.headtubeLength > 1 && $scope.diffBike.headtubeLength <= 10) {
-    rx += 8;
-    ry += 1;
+    rx += 1;
+    ry += 8;
   } else if ($scope.diffBike.headtubeLength > 10) {
-    rx += 16;
-    ry += 2;
+    rx += 2;
+    ry += 16;
   } else if ($scope.diffBike.headtubeLength < 0 && $scope.diffBike.headtubeLength >= -10) {
-    rx -= 8;
-    ry -= 1;
+    rx -= 1;
+    ry -= 8;
   } else if ($scope.diffBike.headtubeLength < -10) {
-    rx -= 16;
-    ry -= 2;
+    rx -= 2;
+    ry -= 16;
   }
 
   //reach adjuster
-    if ($scope.diffBike.headtubeLength > 1 && $scope.diffBike.headtubeLength <= 20) {
+    if ($scope.diffBike.reach > 1 && $scope.diffBike.reach <= 25) {
       rx -= 15;
       htx -= 15;
-    } else if ($scope.diffBike.headtubeLength > 25) {
+    } else if ($scope.diffBike.reach > 25) {
       rx -= 30;
       htx -= 30;
-    } else if ($scope.diffBike.headtubeLength < 0 && $scope.diffBike.headtubeLength >= -25) {
+    } else if ($scope.diffBike.reach < 0 && $scope.diffBike.reach >= -25) {
       rx += 15;
       htx += 15;
-    } else if ($scope.diffBike.headtubeLength < -25) {
+    } else if ($scope.diffBike.reach < -25) {
       rx += 30;
       htx += 30;
     }
@@ -151,6 +172,38 @@ myApp.controller('CalcController', ['$scope', function($scope) {
     cty.stroke();
 
   }
+
+  function addBikeToCustomer () {
+    $scope.customerInfo.bikeOneInfo = $scope.firstBike;
+    $scope.customerInfo.bikeTwoInfo = $scope.secondBike;
+    $scope.customerInfo.bikeCompInfo = $scope.diffBike;
+
+    console.log("this is all the data together: ", $scope.customerInfo);
+  }
+
+  $scope.submitNewComparison = function () {
+  var data = $scope.customerInfo;
+  $http.post('/bikes', data)
+    .then(function () {
+      console.log('POST /bikes', data);
+    });
+};
+
+$scope.print = function() {
+    window.print();
+}
+
+$scope.bikeInfo = function (input) {
+      var choose = input;
+      if (choose == 1) {
+        console.log("its a toptube");
+        alert('Toptubes are this thing');
+      }else if (choose == 2) {
+        console.log('its a headangle');
+        alert('headanle is this thing');
+
+        };
+    };
 
 }]);
 
