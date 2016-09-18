@@ -1,54 +1,70 @@
-<div><h1>I'm showing you all the sweet customers that you have</h1></div>
-<div ng-hide="custom">
-      <div class = "col-md-3">
-<h4>{{showBike.bikeOneInfo.bikeOneMake}} {{showBike.bikeOneInfo.bikeOneModel}} {{showBike.bikeOneInfo.bikeOneSize}}</h4>
+<div><h1>Customer Comparisons</h1></div>
 
-<div>
-<p>Toptube Length: {{showBike.bikeOneInfo.toptubeLength}}</p>
-<p>Headtube Angle: {{showBike.bikeOneInfo.headtubeAngle}}</p>
-<p>Headtube Length: {{showBike.bikeOneInfo.headtubeLength}}</p>
-<p>Effective Toptube: {{showBike.bikeOneInfo.effectiveToptube}}</p>
-<p>BB Height: {{showBike.bikeOneInfo.bbHeight}}</p>
-<p>Wheel Base: {{showBike.bikeOneInfo.wheelBase}}</p>
-<p>Seattube Length: {{showBike.bikeOneInfo.seattubeLength}}</p>
-<p>Seattube Angle: {{showBike.bikeOneInfo.seattubeAngle}}</p>
-<p>Chainstay Length: {{showBike.bikeOneInfo.chainstayLength}}</p>
-<p>Reach: {{showBike.bikeOneInfo.reach}}</p>
-</div>
-</div>
+<!-- modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+ <div class="modal-dialog">
 
-<div class = "col-md-3">
-<h4>{{showBike.bikeTwoInfo.bikeTwoMake}} {{showBike.bikeTwoInfo.bikeTwoModel}} {{showBike.bikeTwoInfo.bikeTwoSize}}</h4>
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title">{{showBike.firstName}} {{showBike.lastName}}</h4>
+     </div>
+     <div class="modal-body">
+             <div class="col-md-4">
+       <h4>{{showBike.bikeOneInfo.bikeOneMake}} {{showBike.bikeOneInfo.bikeOneModel}} {{showBike.bikeOneInfo.bikeOneSize}}</h4>
 
-<div>
-<p>Toptube Length: {{showBike.bikeTwoInfo.toptubeLength}}</p>
-<p>Headtube Angle: {{showBike.bikeTwoInfo.heattubeAngle}}</p>
-<p>Headtube Length: {{showBike.bikeTwoInfo.headtubeLength}}</p>
-<p>Effective Toptube: {{showBike.bikeTwoInfo.effectiveToptube}}</p>
-<p>BB Height: {{showBike.bikeTwoInfo.bbHeight}}</p>
-<p>Wheel Base: {{showBike.bikeTwoInfo.wheelBase}}</p>
-<p>Seattube Length: {{showBike.bikeTwoInfo.seattubeLength}}</p>
-<p>Seattube Angle: {{showBike.bikeTwoInfo.seattubeAngle}}</p>
-<p>Chainstay Length: {{showBike.bikeTwoInfo.chainstayLength}}</p>
-<p>Reach: {{showBike.bikeTwoInfo.reach}}</p>
-</div>
-</div>
+       <div>
+       <p>Toptube Length: {{showBike.bikeOneInfo.toptubeLength}}</p>
+       <p>Headtube Angle: {{showBike.bikeOneInfo.headtubeAngle}}</p>
+       <p>Headtube Length: {{showBike.bikeOneInfo.headtubeLength}}</p>
+       <p>Effective Toptube: {{showBike.bikeOneInfo.effectiveToptube}}</p>
+       <p>BB Height: {{showBike.bikeOneInfo.bbHeight}}</p>
+       <p>Wheel Base: {{showBike.bikeOneInfo.wheelBase}}</p>
+       <p>Seattube Length: {{showBike.bikeOneInfo.seattubeLength}}</p>
+       <p>Seattube Angle: {{showBike.bikeOneInfo.seattubeAngle}}</p>
+       <p>Chainstay Length: {{showBike.bikeOneInfo.chainstayLength}}</p>
+       <p>Reach: {{showBike.bikeOneInfo.reach}}</p>
+       </div>
+       </div>
 
-<div class = "col-md-3">
-<h4>Differences</h4>
+       <div class="col-md-4">
+       <h4>{{showBike.bikeTwoInfo.bikeTwoMake}} {{showBike.bikeTwoInfo.bikeTwoModel}} {{showBike.bikeTwoInfo.bikeTwoSize}}</h4>
 
-<div>
-<p>Toptube Length: {{showBike.bikeCompInfo.toptubeLength}}</p>
-<p>Headtube Angle: {{showBike.bikeCompInfo.headtubeAngle}}</p>
-<p>Headtube Length: {{showBike.bikeCompInfo.headtubeLength}}</p>
-<p>Effective Toptube: {{showBike.bikeCompInfo.effectiveToptube}}</p>
-<p>BB Height: {{showBike.bikeCompInfo.bbHeight}}</p>
-<p>Wheel Base: {{showBike.bikeCompInfo.wheelBase}}</p>
-<p>Seattube Length: {{showBike.bikeCompInfo.seattubeLength}}</p>
-<p>Seattube Angle: {{showBike.bikeCompInfo.seattubeAngle}}</p>
-<p>Chainstay Length: {{showBike.bikeCompInfo.chainstayLength}}</p>
-<p>Reach: {{showBike.bikeCompInfo.reach}}</p>
-</div>
+       <div>
+       <p>Toptube Length: {{showBike.bikeTwoInfo.toptubeLength}}</p>
+       <p>Headtube Angle: {{showBike.bikeTwoInfo.heattubeAngle}}</p>
+       <p>Headtube Length: {{showBike.bikeTwoInfo.headtubeLength}}</p>
+       <p>Effective Toptube: {{showBike.bikeTwoInfo.effectiveToptube}}</p>
+       <p>BB Height: {{showBike.bikeTwoInfo.bbHeight}}</p>
+       <p>Wheel Base: {{showBike.bikeTwoInfo.wheelBase}}</p>
+       <p>Seattube Length: {{showBike.bikeTwoInfo.seattubeLength}}</p>
+       <p>Seattube Angle: {{showBike.bikeTwoInfo.seattubeAngle}}</p>
+       <p>Chainstay Length: {{showBike.bikeTwoInfo.chainstayLength}}</p>
+       <p>Reach: {{showBike.bikeTwoInfo.reach}}</p>
+       </div>
+       </div>
+
+       <div  class="col-md-4">
+       <h4>Differences</h4>
+
+       <div>
+       <p>Toptube Length: {{showBike.bikeCompInfo.toptubeLength}}</p>
+       <p>Headtube Angle: {{showBike.bikeCompInfo.headtubeAngle}}</p>
+       <p>Headtube Length: {{showBike.bikeCompInfo.headtubeLength}}</p>
+       <p>Effective Toptube: {{showBike.bikeCompInfo.effectiveToptube}}</p>
+       <p>BB Height: {{showBike.bikeCompInfo.bbHeight}}</p>
+       <p>Wheel Base: {{showBike.bikeCompInfo.wheelBase}}</p>
+       <p>Seattube Length: {{showBike.bikeCompInfo.seattubeLength}}</p>
+       <p>Seattube Angle: {{showBike.bikeCompInfo.seattubeAngle}}</p>
+       <p>Chainstay Length: {{showBike.bikeCompInfo.chainstayLength}}</p>
+       <p>Reach: {{showBike.bikeCompInfo.reach}}</p>
+       </div>
+       </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     </div>
+   </div>
+ </div>
 </div>
 
   </div>
@@ -67,8 +83,6 @@
     <td>{{bike.phoneNumber}}</td>
     <td>{{bike.bikeOneInfo.bikeOneMake}} {{bike.bikeOneInfo.bikeOneModel}} {{bike.bikeOneInfo.bikeOneSize}}</td>
     <td>{{bike.bikeTwoInfo.bikeTwoMake}} {{bike.bikeTwoInfo.bikeTwoModel}} {{bike.bikeTwoInfo.bikeTwoSize}}</td>
-    <td><button class="btn btn-default" ng-click="toggleCustom($index)">Show</button>      <button class="btn btn-default" ng-click="dataFactory.delete(bike._id)">Delete</button>
-
+    <td><button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="toggleCustom($index)">Show</button>     <button class="btn btn-default" ng-click="deleteCustomer(bike._id)">Delete</button>
   </tr>
-
 </table>

@@ -1,4 +1,4 @@
-<div class = "col-md-8 col-md-offset-4"><h1>I'm a sweet calculator</h1></div class = "col-md-12 col-md-offset-4">
+<div class = "col-md-8 col-md-offset-3"><h1>Bicycle Geometry Comparison Calculator</h1></div>
 
 <div class = "col-md-12">
   <h2>Customer Information</h2>
@@ -33,145 +33,141 @@
 
   <form id="FirstBike">
     <div>
-      <label for="bikeOneMake">Make</label>
+      <label for="bikeOneMake"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(1)">Make</a></label>
       <input class="inputSizeChange" type="text" name="bikeOneMake" id="bikeOneMake" ng-model="firstBike.bikeOneMake" />
     </div>
 
     <div>
-      <label for="bikeOneModel">Model</label>
+      <label for="bikeOneModel"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(2)"> Model</a></label>
       <input class="inputSizeChange" type="text" name="bikeOneModel" id="bikeOneModel" ng-model="firstBike.bikeOneModel" />
     </div>
 
     <div>
-      <label for="bikeOneSize">Size</label>
+      <label for="bikeOneSize"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(3)">Size</a></label>
       <input class="inputSizeChangeTwo" type="number" name="bikeOneSize" id="bikeOneSize" ng-model="firstBike.bikeOneSize" />
     </div>
 
     <div>
-      <label for="toptubeLength">Toptube Length</label>
+      <label for="toptubeLength"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(4)">Top Tube Length</a></label>
       <input class="inputSizeChangeTwo" type="number" name="toptubeLength" id="toptubLength" ng-model="firstBike.toptubeLength" />
-      <button ng-click="bikeInfo(1)">i</button>
     </div>
 
     <div>
-      <label for="headtubeAngle">Headtube Angle</label>
+      <label for="headtubeAngle"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(5)">Head Tube Angle</a></label>
       <input class="inputSizeChangeTwo" type="number" name="headtubeAngle" id="headtubeAngle" ng-model="firstBike.headtubeAngle" />
-      <button ng-click="bikeInfo(2)">i</button>
     </div>
 
     <div>
-      <label for="headtubeLength">Headtube Length</label>
+      <label for="headtubeLength"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(6)">Head Tube Length</a></label>
       <input class="inputSizeChangeTwo" type="number" name="headtubeLength" id="headtubeLength" ng-model="firstBike.headtubeLength" />
     </div>
 
     <div>
-      <label for="effectiveToptube">Effective Toptube</label>
+      <label for="effectiveToptube"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(7)">Effective Top Tube</a></label>
       <input class="inputSizeChangeTwo" type="number" name="effectiveToptube" id="effectiveToptube" ng-model="firstBike.effectiveToptube" />
     </div>
 
     <div>
-      <label for="bbHeight">BB Height</label>
+      <label for="bbHeight"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(8)">BB Height</a></label>
       <input class="inputSizeChangeTwo" type="number" name="bbHeight" id="bbHeight" ng-model="firstBike.bbHeight" />
     </div>
 
     <div>
-      <label for="wheelBase">Wheel Base</label>
+      <label for="wheelBase"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(9)">Wheel Base</a></label>
       <input class="inputSizeChangeTwo" type="number" name="wheelBase" id="wheelBase" ng-model="firstBike.wheelBase" />
     </div>
 
     <div>
-      <label for="seattubeLength">Seattube Length</label>
+      <label for="seattubeLength"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(10)">Seat Tube Length</a></label>
       <input class="inputSizeChangeTwo" type="number" name="seattubeLength" id="seattubeLength" ng-model="firstBike.seattubeLength" />
     </div>
 
     <div>
-      <label for="seattubeAngle">Seattube Angle</label>
+      <label for="seattubeAngle"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(11)">Seat Tube Angle</a></label>
       <input class="inputSizeChangeTwo" type="number" name="seattubeAngle" id="seattubeAngle" ng-model="firstBike.seattubeAngle" />
     </div>
 
     <div>
-      <label for="chainstayLength">Chainstay Length</label>
+      <label for="chainstayLength"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(12)">Chainstay Length</a></label>
       <input class="inputSizeChangeTwo" type="number" name="chainstayLength" id="chainstayLength" ng-model="firstBike.chainstayLength" />
     </div>
 
     <div>
-      <label for="reach">Reach</label>
+      <label for="reach"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(13)">Reach</a></label>
       <input class="inputSizeChangeTwo" type="number" name="reach" id="reach" ng-model="firstBike.reach" />
     </div>
 
-    <!-- <button class="btn btn-default" ng-click="addPerson()">Add Person</button> -->
-<!-- </form> -->
 </div>
 <!-- Mobile friendly works better at "col-md-4" but browser is better at 3 -->
 <div class="col-md-2">
 
   <h3>Bike Two</h3>
   <div>
-    <label for="bikeTwoMake">Make</label>
+    <label for="bikeTwoMake"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(1)">Make</a></label>
     <input class="inputSizeChange" type="text" class="inputSizeChange" name="bikeTwoMake" id="bikeTwoMake" ng-model="secondBike.bikeTwoMake" />
   </div>
 
   <div>
-    <label for="bikeTwoModel">Model</label>
+    <label for="bikeTwoModel"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(2)">Model</a></label>
     <input class="inputSizeChange" type="text" name="bikeTwoModel" id="bikeTwoModel" ng-model="secondBike.bikeTwoModel" />
   </div>
 
   <div>
-    <label for="bikeTwoSize">Size</label>
-    <input class="inputSizeChange" type="number" name="bikeTwoSize" id="bikeTwoSize" ng-model="secondBike.bikeTwoSize" />
+    <label for="bikeTwoSize"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(3)">Size</a></label>
+    <input class="inputSizeChangeTwo" type="number" name="bikeTwoSize" id="bikeTwoSize" ng-model="secondBike.bikeTwoSize" />
   </div>
 
     <div>
-      <label for="toptubeLength">Toptube Length</label>
+      <label for="toptubeLength"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(4)">Top Tube Length</a></label>
       <input class="inputSizeChangeTwo" type="number" name="toptubeLength" id="toptubLength" ng-model="secondBike.toptubeLength" />
     </div>
 
     <div>
-      <label for="headtubeAngle">Headtube Angle</label>
+      <label for="headtubeAngle"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(5)">Head Tube Angle</a></label>
       <input class="inputSizeChangeTwo" type="number" name="headtubeAngle" id="headtubeAngle" ng-model="secondBike.headtubeAngle" />
     </div>
 
     <div>
-      <label for="headtubeLength">Headtube Length</label>
+      <label for="headtubeLength"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(6)">Head Tube Length</a></label>
       <input class="inputSizeChangeTwo" type="number" name="headtubeLength" id="headtubeLength" ng-model="secondBike.headtubeLength" />
     </div>
 
     <div>
-      <label for="effectiveToptube">Effective Toptube</label>
+      <label for="effectiveToptube"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(7)">Effective Top Tube</a></label>
       <input class="inputSizeChangeTwo" type="number" name="effectiveToptube" id="effectiveToptube" ng-model="secondBike.effectiveToptube" />
     </div>
 
     <div>
-      <label for="bbHeight">BB Height</label>
+      <label for="bbHeight"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(8)">BB Height</a></label>
       <input class="inputSizeChangeTwo" type="number" name="bbHeight" id="bbHeight" ng-model="secondBike.bbHeight" />
     </div>
 
     <div>
-      <label for="wheelBase">Wheel Base</label>
+      <label for="wheelBase"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(9)">Wheel Base</a></label>
       <input class="inputSizeChangeTwo" type="number" name="wheelBase" id="wheelBase" ng-model="secondBike.wheelBase" />
     </div>
 
     <div>
-      <label for="seattubeLength">Seattube Length</label>
+      <label for="seattubeLength"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(10)">Seat Tube Length</a></label>
       <input class="inputSizeChangeTwo" type="number" name="seattubeLength" id="seattubeLength" ng-model="secondBike.seattubeLength" />
     </div>
 
     <div>
-      <label for="seattubeAngle">Seattube Angle</label>
+      <label for="seattubeAngle"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(11)">Seat Tube Angle</a></label>
       <input class="inputSizeChangeTwo" type="number" name="seattubeAngle" id="seattubeAngle" ng-model="secondBike.seattubeAngle" />
     </div>
 
     <div>
-      <label for="chainstayLength">Chainstay Length</label>
+      <label for="chainstayLength"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(12)">Chainstay Length</a></label>
       <input class="inputSizeChangeTwo" type="number" name="chainstayLength" id="chainstayLength" ng-model="secondBike.chainstayLength" />
     </div>
 
     <div>
-      <label for="reach">Reach</label>
+      <label for="reach"><a type="button" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="bikeInfo(13)">Reach</a></label>
       <input class="inputSizeChangeTwo" type="number" name="reach" id="reach" ng-model="secondBike.reach" />
     </div>
 
-    <!-- <button class="btn btn-default" ng-click="calcTheDiff()">Find the Diff</button> -->
+
 </div>
 </form>
 
@@ -180,14 +176,14 @@
 <h2>Differences</h2>
 
 <div>
-<p>Toptube Length: {{diffBike.toptubeLength}}</p>
-<p>Headtube Angle: {{diffBike.headtubeAngle}}</p>
-<p>Headtube Length: {{diffBike.headtubeLength}}</p>
-<p>Effective Toptube: {{diffBike.effectiveToptube}}</p>
+<p>Top Tube Length: {{diffBike.toptubeLength}}</p>
+<p>Head Tube Angle: {{diffBike.headtubeAngle}}</p>
+<p>Head Tube Length: {{diffBike.headtubeLength}}</p>
+<p>Effective Top Tube: {{diffBike.effectiveToptube}}</p>
 <p>BB Height: {{diffBike.bbHeight}}</p>
 <p>Wheel Base: {{diffBike.wheelBase}}</p>
-<p>Seattube Length: {{diffBike.seattubeLength}}</p>
-<p>Seattube Angle: {{diffBike.seattubeAngle}}</p>
+<p>Seat Tube Length: {{diffBike.seattubeLength}}</p>
+<p>Seat Tube Angle: {{diffBike.seattubeAngle}}</p>
 <p>Chainstay Length: {{diffBike.chainstayLength}}</p>
 <p>Reach: {{diffBike.reach}}</p>
 </div>
@@ -197,30 +193,21 @@
 
 <div class="col-md-4">
 <button class="btn btn-default" ng-click="calcTheDiff()">Find the Diff</button>
-<button class="btn btn-default" ng-click="submitNewComparison()">Save</button>
-<button class="btn btn-default">Email</button>
+<button class="btn btn-default" ng-click="saveData()">Save</button>
 <button class="btn btn-default" ng-click="print()">Print</button>
 </div>
 
-<!-- trying modals -->
 
 
-
-       <!-- <div ng-controller="modalController">
-            <button class="btn btn-default" ng-click="open(customer)">modal</button> <br /> -->
-
-                <!--MODAL WINDOW-->
-                <!-- <script type="text/ng-template" id="myModalContent.html">
-                    <div class="modal-header">
-                        <h3>The Customer Name is: {{ customer.name }}</h3>
-                    </div>
-                    <div class="modal-body">
-                            This is where the Customer Details Goes<br />
-                            {{ customer.details }}
-                    </div>
-                    <div class="modal-footer">
-
-                    </div>
-                </script>
-
-    </div> -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{inputInfoTitle}}</h4>
+      </div>
+      <div class="modal-body">
+      {{inputInfo}}
+    </div>
+    </div>
+  </div>
+</div>

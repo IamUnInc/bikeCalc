@@ -1,6 +1,8 @@
 .jumbotron{
-    background-color:#000000;
-    color: white;
+    /*background-color:black;*/
+    background: url(http://www.dphotographer.co.uk/users/8503/thm1024/stilllife25.jpg);
+    color: black;
+    background-size: cover;
 }
 
 .inputSizeChange {
@@ -8,7 +10,7 @@
 }
 
 .inputSizeChangeTwo {
-  width:50px;
+  width:35px;
 }
 
 .tooltip {
@@ -35,4 +37,17 @@
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+a {
+  color: black;
+  size:2px;
 }

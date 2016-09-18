@@ -13,27 +13,11 @@ if($scope.dataFactory.customers() === undefined) {
     });
   } else {
     $scope.bikes = $scope.dataFactory.customers();
-  }
+  };
 
-// function getCustAndBikes() {
-//   $http.get('/bikes')
-//     .then(function (response) {
-//       console.log('GET /bikes', response.data);
-//
-//         $scope.bikes = response.data;
-//          console.log($scope.bikes);
-//       });
-// }
-
-
-  // $scope.deleteCustomer = function (id) {
-  //   $http.delete('/bikes/' + id)
-  //     .then(function () {
-  //       console.log('DELETE /bikes/', id);
-  //       getCustAndBikes();
-  //     });
-  // };
-
+$scope.deleteCustomer = function (id){
+$scope.dataFactory.deleteCustomer(id);
+}
 
 function findTheBike(theId) {
     $scope.showBike = [];

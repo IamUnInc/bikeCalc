@@ -1,10 +1,13 @@
-myApp.controller('CalcController', ['$scope', '$http', function($scope, $http) {
+myApp.controller('CalcController', ['$scope', 'DataFactory', function($scope, DataFactory) {
   console.log("CalcController works");
 
+  $scope.dataFactory = DataFactory;
   $scope.customerInfo = {};
   $scope.firstBike = {};
   $scope.secondBike = {};
   $scope.diffBike = {};
+  $scope.inputInfo = "";
+  $scope.inputInfoTitle = "";
 
   $scope.calcTheDiff = function () {
     $scope.diffBike = {};
@@ -43,26 +46,6 @@ myApp.controller('CalcController', ['$scope', '$http', function($scope, $http) {
     addBikeToCustomer();
     makingPictures();
   }
-
-  // function validateForm(one, two, three) {
-  //     var x = one;
-  //     var y = two;
-  //     var z = three;
-  //     if ((x == null || x == "") || (y == null || y == "")) {
-  //         z = 0;
-  //         return z;
-  //     }
-  // }
-
-  // function resultsAreNan () {
-  //   if ($scope.diffBike.toptubeLength === undefined || $scope.diffBike.toptubeLength === NaN || $scope.diffBike.toptubeLength === ""  || $scope.diffBike.toptubeLength === null) {
-  //     $scope.diffBike.toptubeLength = 0;
-  //     console.log($scope.diffBike.toptubeLength);
-  //   } else {
-  //     console.log("It didn't work. This is what you have ", $scope.diffBike.toptubeLength);
-  //   }
-  // }
-
 
   makingPictures = function () {
     var canvas = "";
@@ -173,6 +156,7 @@ myApp.controller('CalcController', ['$scope', '$http', function($scope, $http) {
 
   }
 
+// This brings all the information into one object
   function addBikeToCustomer () {
     $scope.customerInfo.bikeOneInfo = $scope.firstBike;
     $scope.customerInfo.bikeTwoInfo = $scope.secondBike;
@@ -181,31 +165,75 @@ myApp.controller('CalcController', ['$scope', '$http', function($scope, $http) {
     console.log("this is all the data together: ", $scope.customerInfo);
   }
 
-  $scope.submitNewComparison = function () {
-  var data = $scope.customerInfo;
-  $http.post('/bikes', data)
-    .then(function () {
-      console.log('POST /bikes', data);
-    });
-};
-
 $scope.print = function() {
     window.print();
-}
+};
+
+$scope.saveData = function() {
+$scope.dataFactory.submitNewComparison($scope.customerInfo);
+};
 
 $scope.bikeInfo = function (input) {
       var choose = input;
       if (choose == 1) {
-        console.log("its a toptube");
-        alert('Toptubes are this thing');
+        console.log("Make");
+        $scope.inputInfoTitle = "Make";
+        $scope.inputInfo = "The make of the bicycle is the company that it is manufactured by.";
       }else if (choose == 2) {
-        console.log('its a headangle');
-        alert('headanle is this thing');
+        console.log('Model');
+        $scope.inputInfoTitle = "Model";
+        $scope.inputInfo = "The model is the name given to the bicycle by its manufacturer.";
+      }else if (choose == 3) {
+        console.log('Size');
+        $scope.inputInfoTitle = "Size";
+        $scope.inputInfo = "The size is the assigned size by the manufacturer";
+      }else if (choose == 4) {
+        console.log('Top Tube Length');
+        $scope.inputInfoTitle = "Toptube Length";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 5) {
+        console.log('Head Tube Angle');
+        $scope.inputInfoTitle = "Headtube Angle";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 6) {
+        console.log('Head Tube Length');
+        $scope.inputInfoTitle = "Headtube Length";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 7) {
+        console.log('Effective Toptube');
+        $scope.inputInfoTitle = "Effective Toptube";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 8) {
+        console.log('BB Height');
+        $scope.inputInfoTitle = "Bottom Bracket Height";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 9) {
+        console.log('Wheelbase');
+        $scope.inputInfoTitle = "Wheelbase";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 10) {
+        console.log('Seat Tube Length');
+        $scope.inputInfoTitle = "Seattube Length";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 11) {
+        console.log('Seattube Angle');
+        $scope.inputInfoTitle = "Seattube Angle";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 12) {
+        console.log('Chainstay Length');
+        $scope.inputInfoTitle = "Chainstay Length";
+        $scope.inputInfo = "The headange is this";
+      }else if (choose == 13) {
+        console.log('Reach');
+        $scope.inputInfoTitle = "Reach";
+        $scope.inputInfo = "The headange is this";
 
         };
     };
 
 }]);
+
+
 
 function clearcanvas()
 {
