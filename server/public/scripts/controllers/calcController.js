@@ -126,6 +126,19 @@ myApp.controller('CalcController', ['$scope', 'DataFactory', function($scope, Da
 
     console.log("i work");
   var canvas = document.querySelector("canvas"),
+    ctz = canvas.getContext ("2d");
+    ctz.beginPath();
+    ctz.moveTo(10, 10);
+    ctz.font = "30px Arial";
+    ctz.fillStyle = "black";
+    ctz.fillText("Bike One",10,50);
+
+    cta = canvas.getContext ("2d");
+    cta.beginPath();
+    cta.font = "30px Arial";
+    cta.fillStyle = "#0000ff";
+    cta.fillText("Bike Two",60,100);
+
     ctx = canvas.getContext ("2d");
     ctx.beginPath();
     ctx.moveTo(190, 320); //BB
@@ -150,7 +163,7 @@ myApp.controller('CalcController', ['$scope', 'DataFactory', function($scope, Da
     cty.lineTo(htx, hty); //bottom of headtube to top
     cty.lineTo(stx, sty); //top of headtube to the toptube at seattube
     cty.lineJoin = "round";
-    cty.strokeStyle = "green";
+    cty.strokeStyle = "#0000ff";
     cty.lineWidth = 3.0;
     cty.stroke();
 
@@ -189,44 +202,44 @@ $scope.bikeInfo = function (input) {
         $scope.inputInfo = "The size is the assigned size by the manufacturer";
       }else if (choose == 4) {
         console.log('Top Tube Length');
-        $scope.inputInfoTitle = "Toptube Length";
-        $scope.inputInfo = "The headange is this";
+        $scope.inputInfoTitle = "Top Tube Length";
+        $scope.inputInfo = "The top tube is the tube that runs horizontally connecting the seat tube and the head tube.";
       }else if (choose == 5) {
         console.log('Head Tube Angle');
-        $scope.inputInfoTitle = "Headtube Angle";
-        $scope.inputInfo = "The headange is this";
+        $scope.inputInfoTitle = "Head Tube Angle";
+        $scope.inputInfo = "The head tube angle is the angle that the head tube is postion.";
       }else if (choose == 6) {
         console.log('Head Tube Length');
-        $scope.inputInfoTitle = "Headtube Length";
-        $scope.inputInfo = "The headange is this";
+        $scope.inputInfoTitle = "Head Tube Length";
+        $scope.inputInfo = "The head tube is the tube that runs vertically connecting the top tube and the down tube.";
       }else if (choose == 7) {
-        console.log('Effective Toptube');
-        $scope.inputInfoTitle = "Effective Toptube";
-        $scope.inputInfo = "The headange is this";
+        console.log('Effective Top Tube');
+        $scope.inputInfoTitle = "Effective Top Tube";
+        $scope.inputInfo = "The effective top tube is the length between the seat tube and the head tube assuming a horizontal top tube.";
       }else if (choose == 8) {
         console.log('BB Height');
         $scope.inputInfoTitle = "Bottom Bracket Height";
-        $scope.inputInfo = "The headange is this";
+        $scope.inputInfo = "The bottom bracket height is the distance between the center of the bottom bracket and the ground.";
       }else if (choose == 9) {
         console.log('Wheelbase');
         $scope.inputInfoTitle = "Wheelbase";
-        $scope.inputInfo = "The headange is this";
+        $scope.inputInfo = "The wheelbase is the distance between the center of the back drop out to the center of the front drop out.";
       }else if (choose == 10) {
         console.log('Seat Tube Length');
-        $scope.inputInfoTitle = "Seattube Length";
-        $scope.inputInfo = "The headange is this";
+        $scope.inputInfoTitle = "Seat Tube Length";
+        $scope.inputInfo = "The seat tube length is the length of the tube that runds verically between the top tube and the bottom bracket.";
       }else if (choose == 11) {
-        console.log('Seattube Angle');
-        $scope.inputInfoTitle = "Seattube Angle";
-        $scope.inputInfo = "The headange is this";
+        console.log('Seat Tube Angle');
+        $scope.inputInfoTitle = "Seat Tube Angle";
+        $scope.inputInfo = "The seat tube angle is the degree of angle that the seat tube is positioned.";
       }else if (choose == 12) {
         console.log('Chainstay Length');
         $scope.inputInfoTitle = "Chainstay Length";
-        $scope.inputInfo = "The headange is this";
+        $scope.inputInfo = "The chainstay length is the length of the tube that connects the top of the seat tube to the rear drop out.";
       }else if (choose == 13) {
         console.log('Reach');
         $scope.inputInfoTitle = "Reach";
-        $scope.inputInfo = "The headange is this";
+        $scope.inputInfo = "The reach is the distance from the center of the bottom bracket to the center of the head tube.";
 
         };
     };
