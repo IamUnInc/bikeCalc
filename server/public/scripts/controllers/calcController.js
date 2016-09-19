@@ -94,17 +94,17 @@ myApp.controller('CalcController', ['$scope', 'DataFactory', function($scope, Da
 
 //headtube length adjuster
   if ($scope.diffBike.headtubeLength > 1 && $scope.diffBike.headtubeLength <= 10) {
-    rx += 1;
-    ry += 8;
-  } else if ($scope.diffBike.headtubeLength > 10) {
-    rx += 2;
-    ry += 16;
-  } else if ($scope.diffBike.headtubeLength < 0 && $scope.diffBike.headtubeLength >= -10) {
     rx -= 1;
     ry -= 8;
-  } else if ($scope.diffBike.headtubeLength < -10) {
+  } else if ($scope.diffBike.headtubeLength > 10) {
     rx -= 2;
     ry -= 16;
+  } else if ($scope.diffBike.headtubeLength < 0 && $scope.diffBike.headtubeLength >= -10) {
+    rx += 1;
+    ry += 8;
+  } else if ($scope.diffBike.headtubeLength < -10) {
+    rx += 2;
+    ry += 16;
   }
 
   //reach adjuster
