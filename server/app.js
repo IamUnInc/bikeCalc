@@ -17,7 +17,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, './public')));
 
 //mongoose cannection
-var databaseUri = 'mongodb://localhost:27017/omicron';
+// var databaseUri = 'mongodb://localhost:27017/omicron';
+var databaseUri = 'mongodb://Nick:1234@ds033126.mlab.com:33126/heroku_5zzglcpp';
 
 mongoose.connect(databaseUri);
 
